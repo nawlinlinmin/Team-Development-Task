@@ -32,7 +32,7 @@
        <% @working_team.agendas.each do |agenda| %>
          <li class="nav-item has-treeview menu-open">
            <% if agenda.team.owner_id == current_user.id || agenda.user.id == current_user.id %>
-             <%= link_to '削除', agenda_path(agenda), method: :delete, class: 'btn btn-sm btn-success float-right' %>
+             <%= link_to '削除', agenda_path(agenda), method: :delete, class: 'btn btn-sm btn-danger float-right' %>
            <% end %>
            <a href="#" class="nav-link">
              <i class="fa fa-circle-o nav-icon"></i>

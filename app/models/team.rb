@@ -15,4 +15,13 @@ class Team < ApplicationRecord
   def invite_member(user)
     assigns.create(user: user)
   end
+
+  def isOwned?(user)
+    if user.nil?
+      return false
+    elsif self.owner_id == user.id
+      return true
+    end
+  end
+  
 end
